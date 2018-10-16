@@ -1,0 +1,73 @@
+
+ 1)//When calling addCustomer
+	
+   1.1	Given: while calling save method with arguments.
+	When : name = "vishal",
+ mobileNo.="9021226390", amount=0.
+	Then : message should display as Customer added successfully.
+
+ 
+   1.2	Given: while calling save method with arguments.
+	When : name = "vishal",
+ mobileNo.="9021226390", amount=0.	
+	Then : error message should display as Invalid Mobile number.
+
+	
+   1.3	Given: While calling save method with arguments.
+	When : name = "",
+ mobileNo.="9021226390", amount=0.
+	Then : error message should display as Name cannot be null.
+ 
+   1.4	Given: While calling save method with arguments.
+	When : name = "vishal",
+ mobileNo.="abcdefghsf", amount=0.	
+	Then : error message should display as Invalid Mobile number.
+
+	
+   1.5	Given: While calling save/update method with arguments.
+	When : name = "vishal",
+ mobileNo.="9021226390", amount=2000. customer already exist.
+	Then : message should display as Customer updated successfully.
+
+
+
+ 2)//While calling showBalance
+	
+   2.1	Given: While calling findByMobile with argument.
+	When :
+ mobileNo.="9021226390" which is present in repository.
+	Then : customer account related information and its balance should display.
+
+ 
+   2.2	Given: While calling findByMobile with argument.
+	When :
+ mobileNo.="9764812457" which is not present in repository.
+	Then : error message should display as Invalid wallet/account number.
+
+   2.3	Given: While calling findByMobile with argument.
+	When :
+ mobileNo.=""
+	Then : error message should display as wallet/account number cannot be blank.
+
+   2.4	Given: While calling findByMobile with argument.
+	When :
+ mobileNo.="abcefghrff" which is not present in repository.
+	Then : error message should display as Invalid wallet/account number.
+
+   2.5	Given: While calling findByMobile with argument.
+	When :
+ mobileNo.="9021226390" which is present in repository.
+	Then : customer account related information and its balance should display.
+
+
+
+
+
+
+         
+    
+   
+
+
+
+
